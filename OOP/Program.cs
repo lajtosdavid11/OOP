@@ -7,17 +7,28 @@ using System.Threading.Tasks;
 namespace OOP
 {
 
-    class Ember
+    class Teglalap
     {
-        public string nev;
-        public int eletkor;
-        public string bemutatkozas()
+        public int kerulet;
+        public int terulet;
+        
+        public string keruletMetodus()
         {
-            //Console.WriteLine("{0} vagyok és {1} éves", nev, eletkor);
-            string valasz = $"{nev} vagyok {eletkor} éves"; 
+            string valasz = $"{kerulet}";
             return valasz;
-
         }
+        public string teruletMetodus()
+        {
+            string valasz = $"{terulet}";
+            return valasz;
+        }
+
+
+    }
+
+    public string kor()
+    {
+
     }
     
     class Program
@@ -26,19 +37,14 @@ namespace OOP
         
         static void Main(string[] args)
         {
-            Ember Pisti = new Ember();
-            Ember Eva = new Ember();
+            Teglalap a = new Teglalap();
+            Teglalap b = new Teglalap();
+            a.kerulet = 5;
+            b.terulet = 10;
+            Console.WriteLine("Kerulet {0}",a.keruletMetodus());
+            Console.WriteLine("Terulet {0}",b.teruletMetodus());
 
-            Eva.nev = "Nagy Éva";
-            Eva.eletkor = 18;
 
-            Pisti.nev = "Nagy Pisti";
-            Pisti.eletkor = 20;
-
-            Pisti.eletkor++;
-
-            Console.WriteLine(Pisti.bemutatkozas());
-            Console.WriteLine(Eva.bemutatkozas());
 
             Console.ReadKey();
         }
